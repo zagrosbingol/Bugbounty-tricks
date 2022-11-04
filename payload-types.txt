@@ -6,6 +6,11 @@ Login and register payloads:
 3. "<script>alert(0)</script>"@example.com
 
 
+Sql injection:
+(select(0)from(select(sleep(25)))v) --> Blind 25 seconds
+
+
+
 SSTI template injection:
 "<%= 7 * 7 %>"@example.com
 test+(${{7*7}})@example.com
