@@ -22,3 +22,18 @@ Use encoding for slashes
 
 3. Use .JSON after url to unmask parameters when inspect element does not work:
 Append .json to the end of url and see it it works to unmask details.
+
+
+4. Ruby on rails attacks:
+Ruby-on-Rails enforces "convention" over "configuration" which really helps to guess class names and attributes' name...
+
+Identification signs:
+The first part is the table name and the second part in the brackets is the key.
+See: https://pentesterlab.com/exercises/autho_06/course
+username[user] =
+password[Password] =
+
+ 4.1 Mass assignments Overwriting arbitrary parameters:
+ - Review firstly the source code and see what parameters exist
+ - Continue by making a form request, add new parameters that were found in the source code to manipulate the query. This includes new tables and keys
+ 
