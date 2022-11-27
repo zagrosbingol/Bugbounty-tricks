@@ -4,7 +4,6 @@
 - Note the ID of zaggeb2, can be anything such as UUID, ID, cookie based ID.
 - Navigate with burp to different pages and change youre own ID to zaggeb2 ID.
 - See if any info or anything else popup.
-
 --> See payload types for different bypasses.
 
 
