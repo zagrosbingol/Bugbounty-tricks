@@ -1,0 +1,30 @@
+PHP:
+1. Using string concatenation to execute code
+Lets say you have a code like
+<?php
+system("ls")
+?>
+You can exploit the following with concatenation, with the following payload, the quote in the beginning is to end the previous command:
+".system('ls')";#
+
+Note: Url encode endline character and hash sign
+
+
+Ruby on rails:
+Always remember --> EVAL IS EVIL
+
+1. RCE via EVAL
+Reference:https://pentesterlab.com/exercises/codexec_05/course
+
+Inject the following in the parameter:
+
+myuser"+`uname`+"
+
+Here, we will need to do the following:
+
+    A double-quote " to break out of the string.
+    Add a + sign for string concatenation (don't forget to URL-encode it)
+    Add a call to the command ([COMMAND]) we want to run using `[COMMAND]`.
+    Add another + sign for string concatenation.
+    Another double-quote " to close the one that was already there.
+
