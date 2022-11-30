@@ -41,6 +41,6 @@ Url encode and unicode normalization including raw format. Great for ATO, check 
 
 
 
-                                                    ** Password Reset:**
+                                                 ** Password Reset:**
 
 <img src="https://pbs.twimg.com/media/FiRgcuUacAAUpKJ?format=jpg&name=large" alt="Alt text" title="Optional title">

