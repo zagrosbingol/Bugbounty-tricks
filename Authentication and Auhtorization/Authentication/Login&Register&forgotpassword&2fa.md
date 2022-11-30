@@ -1,6 +1,6 @@
 
 
-                                                    Login:
+                                                    **Login:**
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-                                                    Register:
+                                                    **Register:**
 
 1.  Unicode normalization:
 Make 1 account(Zaggeb@gmail.com) and then log out.
@@ -38,3 +38,9 @@ See if it goes through.
 Url encode and unicode normalization including raw format. Great for ATO, check https://github.com/0xacb/recollapse/blob/main/till_recollapse_fuzzing_the_web_for_mysterious_bugs.pdf
 
 5. CLRF bypass:
+
+
+
+                                                    ** Password Reset:**
+
+<img src="https://pbs.twimg.com/media/FiRgcuUacAAUpKJ?format=jpg&name=large" alt="Alt text" title="Optional title">
